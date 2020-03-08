@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import './App.css';
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const startSecond = 3730;
@@ -114,18 +113,16 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div style={{ textAlign: 'center' }}>
       <div>
-        <div>
-          <button onClick={handleAudioRecordClick}>
-            曲を再生して合いの手を入れる
-          </button>
-          <button onClick={handleAudioPlayClick}>
-            録音した合いの手を合わせて再生
-          </button>
-        </div>
-        <div style={{ fontSize: '4rem', color: 'red' }}>{message}</div>
+        <button onClick={handleAudioRecordClick}>
+          曲を再生して合いの手を入れる
+        </button>
+        <button onClick={handleAudioPlayClick}>
+          録音した合いの手を合わせて再生
+        </button>
       </div>
+      <div style={{ fontSize: '4rem', color: 'red' }}>{message}</div>
     </div>
   );
 }
